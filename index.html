@@ -1,13 +1,696 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>website</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing Pro - Quản Trị Bài Viết Tiếp Thị</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        
+        .slider {
+            display: flex;
+            transition: transform 0.8s ease-in-out;
+        }
+        
+        .slide {
+            min-width: 100%;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+        }
+        
+        .slide.active {
+            opacity: 1;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .animate-pulse-slow {
+            animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        
+        .hover-lift {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <h1 class="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+                            Marketing Pro
+                        </h1>
+                    </div>
+                </div>
+                
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="./index.html" class="nav-link text-purple-600 border-b-2 border-purple-600 px-3 py-2 text-sm font-medium">Trang Chủ</a>
+                        <a href="./about.html" class="nav-link text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors">Giới Thiệu</a>
+                        <a href="#" class="nav-link text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors">Dự Án</a>
+                        <a href="#" class="nav-link text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors">Bảng Giá</a>
+                        <a href="#" class="nav-link text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors">Liên Hệ</a>
+                    </div>
+                </div>
+                
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-purple-600">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="./index.html" class="block px-3 py-2 text-purple-600 font-medium">Trang Chủ</a>
+                <a href="./about.html" class="block px-3 py-2 text-gray-700 hover:text-purple-600">Giới Thiệu</a>
+                <a href="#" class="block px-3 py-2 text-gray-700 hover:text-purple-600">Dự Án</a>
+                <a href="#" class="block px-3 py-2 text-gray-700 hover:text-purple-600">Bảng Giá</a>
+                <a href="#" class="block px-3 py-2 text-gray-700 hover:text-purple-600">Liên Hệ</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-10"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center">
+                <h2 class="text-5xl md:text-6xl font-bold mb-6 animate-float">
+                    Quản Trị Marketing
+                    <span class="block text-yellow-300">Chuyên Nghiệp</span>
+                </h2>
+                <p class="text-xl md:text-2xl mb-8 opacity-90 max-w-3xl mx-auto">
+                    Nền tảng quản lý bài viết tiếp thị hàng đầu, giúp doanh nghiệp tối ưu hóa chiến lược marketing và tăng trưởng bền vững
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all hover-lift">
+                        Bắt Đầu Ngay
+                    </button>
+                    <button class="glass-effect text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:bg-opacity-20 transition-all">
+                        Xem Demo
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Floating Elements -->
+        <div class="absolute top-20 left-10 w-20 h-20 bg-white bg-opacity-10 rounded-full animate-pulse-slow"></div>
+        <div class="absolute bottom-20 right-10 w-32 h-32 bg-yellow-300 bg-opacity-20 rounded-full animate-float"></div>
+        <div class="absolute top-1/2 right-20 w-16 h-16 bg-pink-300 bg-opacity-20 rounded-full animate-pulse-slow"></div>
+    </section>
+
+    <!-- Featured Projects Slider -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-bold text-gray-900 mb-4">Dự Án Nổi Bật</h3>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Khám phá những dự án marketing thành công mà chúng tôi đã thực hiện cho các doanh nghiệp
+                </p>
+            </div>
+            
+            <div class="relative">
+                <div id="projects-slider" class="overflow-hidden rounded-2xl">
+                    <div class="slider" id="projects-track">
+                        <!-- Project 1 -->
+                        <div class="slide active">
+                            <div class="bg-gradient-to-r from-blue-500 to-purple-600 p-12 text-white relative overflow-hidden">
+                                <div class="grid md:grid-cols-2 gap-8 items-center relative z-10">
+                                    <div>
+                                        <h4 class="text-3xl font-bold mb-4">Chiến Dịch Digital Marketing</h4>
+                                        <p class="text-lg mb-6 opacity-90">
+                                            Tăng trưởng 300% doanh số cho công ty công nghệ thông qua chiến lược marketing đa kênh
+                                        </p>
+                                        <div class="flex flex-wrap gap-4 mb-6">
+                                            <span class="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">SEO</span>
+                                            <span class="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">Social Media</span>
+                                            <span class="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">Content Marketing</span>
+                                        </div>
+                                        <button class="bg-white text-purple-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+                                            Xem Chi Tiết
+                                        </button>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="bg-white bg-opacity-10 rounded-2xl p-8 backdrop-blur-sm">
+                                            <div class="text-5xl font-bold mb-2">300%</div>
+                                            <div class="text-lg opacity-90">Tăng Trưởng Doanh Số</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="absolute -top-10 -right-10 w-40 h-40 bg-white bg-opacity-10 rounded-full"></div>
+                                <div class="absolute -bottom-10 -left-10 w-32 h-32 bg-yellow-300 bg-opacity-20 rounded-full"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Project 2 -->
+                        <div class="slide">
+                            <div class="bg-gradient-to-r from-green-500 to-teal-600 p-12 text-white relative overflow-hidden">
+                                <div class="grid md:grid-cols-2 gap-8 items-center relative z-10">
+                                    <div>
+                                        <h4 class="text-3xl font-bold mb-4">Branding & Content Strategy</h4>
+                                        <p class="text-lg mb-6 opacity-90">
+                                            Xây dựng thương hiệu mạnh mẽ và tăng độ nhận diện thương hiệu 250% cho startup F&B
+                                        </p>
+                                        <div class="flex flex-wrap gap-4 mb-6">
+                                            <span class="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">Branding</span>
+                                            <span class="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">Video Marketing</span>
+                                            <span class="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">Influencer</span>
+                                        </div>
+                                        <button class="bg-white text-teal-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+                                            Xem Chi Tiết
+                                        </button>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="bg-white bg-opacity-10 rounded-2xl p-8 backdrop-blur-sm">
+                                            <div class="text-5xl font-bold mb-2">250%</div>
+                                            <div class="text-lg opacity-90">Tăng Nhận Diện TH</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="absolute -top-10 -right-10 w-40 h-40 bg-white bg-opacity-10 rounded-full"></div>
+                                <div class="absolute -bottom-10 -left-10 w-32 h-32 bg-pink-300 bg-opacity-20 rounded-full"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Project 3 -->
+                        <div class="slide">
+                            <div class="bg-gradient-to-r from-orange-500 to-red-600 p-12 text-white relative overflow-hidden">
+                                <div class="grid md:grid-cols-2 gap-8 items-center relative z-10">
+                                    <div>
+                                        <h4 class="text-3xl font-bold mb-4">E-commerce Marketing</h4>
+                                        <p class="text-lg mb-6 opacity-90">
+                                            Tối ưu hóa conversion rate và tăng doanh thu online 400% cho chuỗi bán lẻ
+                                        </p>
+                                        <div class="flex flex-wrap gap-4 mb-6">
+                                            <span class="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">Email Marketing</span>
+                                            <span class="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">PPC</span>
+                                            <span class="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">CRO</span>
+                                        </div>
+                                        <button class="bg-white text-red-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+                                            Xem Chi Tiết
+                                        </button>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="bg-white bg-opacity-10 rounded-2xl p-8 backdrop-blur-sm">
+                                            <div class="text-5xl font-bold mb-2">400%</div>
+                                            <div class="text-lg opacity-90">Tăng Doanh Thu</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="absolute -top-10 -right-10 w-40 h-40 bg-white bg-opacity-10 rounded-full"></div>
+                                <div class="absolute -bottom-10 -left-10 w-32 h-32 bg-blue-300 bg-opacity-20 rounded-full"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slider Indicators -->
+                <div class="flex justify-center mt-8 space-x-2">
+                    <button class="slider-dot w-3 h-3 rounded-full bg-purple-600 transition-all" data-slide="0"></button>
+                    <button class="slider-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-purple-400 transition-all" data-slide="1"></button>
+                    <button class="slider-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-purple-400 transition-all" data-slide="2"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-20 gradient-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 text-white text-center">
+                <div class="hover-lift">
+                    <div class="text-5xl font-bold mb-2">500+</div>
+                    <div class="text-xl opacity-90">Dự Án Hoàn Thành</div>
+                </div>
+                <div class="hover-lift">
+                    <div class="text-5xl font-bold mb-2">200+</div>
+                    <div class="text-xl opacity-90">Khách Hàng Hài Lòng</div>
+                </div>
+                <div class="hover-lift">
+                    <div class="text-5xl font-bold mb-2">98%</div>
+                    <div class="text-xl opacity-90">Tỷ Lệ Thành Công</div>
+                </div>
+                <div class="hover-lift">
+                    <div class="text-5xl font-bold mb-2">5+</div>
+                    <div class="text-xl opacity-90">Năm Kinh Nghiệm</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Slider -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-bold text-gray-900 mb-4">Đánh Giá Khách Hàng</h3>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Cảm nhận thực tế từ những khách hàng đã tin tưởng và hợp tác cùng chúng tôi
+                </p>
+            </div>
+            
+            <div class="relative">
+                <div id="reviews-slider" class="overflow-hidden">
+                    <div class="slider" id="reviews-track">
+                        <!-- Review 1 -->
+                        <div class="slide active">
+                            <div class="grid md:grid-cols-3 gap-8">
+                                <div class="bg-white p-8 rounded-2xl shadow-lg hover-lift">
+                                    <div class="flex items-center mb-4">
+                                        <div class="flex text-yellow-400 text-xl">
+                                            ★★★★★
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-700 mb-6 text-lg">
+                                        "Marketing Pro đã giúp chúng tôi tăng trưởng doanh số vượt bậc. Đội ngũ chuyên nghiệp và chiến lược hiệu quả."
+                                    </p>
+                                    <div class="flex items-center">
+                                        <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                                            A
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900">Anh Tuấn</div>
+                                            <div class="text-gray-600">CEO - TechViet</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-white p-8 rounded-2xl shadow-lg hover-lift">
+                                    <div class="flex items-center mb-4">
+                                        <div class="flex text-yellow-400 text-xl">
+                                            ★★★★★
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-700 mb-6 text-lg">
+                                        "Dịch vụ tuyệt vời! ROI tăng 250% chỉ sau 6 tháng hợp tác. Rất hài lòng với kết quả."
+                                    </p>
+                                    <div class="flex items-center">
+                                        <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-teal-500 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                                            L
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900">Chị Linh</div>
+                                            <div class="text-gray-600">Marketing Director - FoodMax</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-white p-8 rounded-2xl shadow-lg hover-lift">
+                                    <div class="flex items-center mb-4">
+                                        <div class="flex text-yellow-400 text-xl">
+                                            ★★★★★
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-700 mb-6 text-lg">
+                                        "Chiến lược content marketing tuyệt vời. Thương hiệu của chúng tôi được biết đến rộng rãi hơn."
+                                    </p>
+                                    <div class="flex items-center">
+                                        <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                                            M
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900">Anh Minh</div>
+                                            <div class="text-gray-600">Founder - EcoGreen</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Review 2 -->
+                        <div class="slide">
+                            <div class="grid md:grid-cols-3 gap-8">
+                                <div class="bg-white p-8 rounded-2xl shadow-lg hover-lift">
+                                    <div class="flex items-center mb-4">
+                                        <div class="flex text-yellow-400 text-xl">
+                                            ★★★★★
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-700 mb-6 text-lg">
+                                        "Đội ngũ Marketing Pro rất chuyên nghiệp và sáng tạo. Các chiến dịch luôn đạt hiệu quả cao."
+                                    </p>
+                                    <div class="flex items-center">
+                                        <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                                            H
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900">Chị Hương</div>
+                                            <div class="text-gray-600">Brand Manager - BeautyPlus</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-white p-8 rounded-2xl shadow-lg hover-lift">
+                                    <div class="flex items-center mb-4">
+                                        <div class="flex text-yellow-400 text-xl">
+                                            ★★★★★
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-700 mb-6 text-lg">
+                                        "Kết quả vượt mong đợi! Traffic website tăng 400% và conversion rate cải thiện đáng kể."
+                                    </p>
+                                    <div class="flex items-center">
+                                        <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                                            D
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900">Anh Dũng</div>
+                                            <div class="text-gray-600">E-commerce Director - ShopViet</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-white p-8 rounded-2xl shadow-lg hover-lift">
+                                    <div class="flex items-center mb-4">
+                                        <div class="flex text-yellow-400 text-xl">
+                                            ★★★★★
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-700 mb-6 text-lg">
+                                        "Phần mềm quản lý marketing tuyệt vời. Giao diện thân thiện và tính năng đầy đủ."
+                                    </p>
+                                    <div class="flex items-center">
+                                        <div class="w-12 h-12 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                                            T
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900">Chị Thảo</div>
+                                            <div class="text-gray-600">Marketing Lead - StartupHub</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Reviews Slider Indicators -->
+                <div class="flex justify-center mt-8 space-x-2">
+                    <button class="reviews-dot w-3 h-3 rounded-full bg-purple-600 transition-all" data-slide="0"></button>
+                    <button class="reviews-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-purple-400 transition-all" data-slide="1"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+     <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-bold text-gray-900 mb-4">Dịch Vụ Của Chúng Tôi</h3>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Giải pháp marketing toàn diện giúp doanh nghiệp phát triển bền vững
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-100 p-8 rounded-2xl hover-lift">
+                    <div class="w-16 h-16 bg-blue-500 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Digital Marketing</h4>
+                    <p class="text-gray-700 mb-6">
+                        Tối ưu hóa chiến lược marketing đa kênh với SEO, SEM, Social Media và Content Marketing
+                    </p>
+                    <button class="text-blue-600 font-semibold hover:text-blue-800 transition-colors">
+                        Tìm hiểu thêm →
+                    </button>
+                </div>
+                
+                <div class="bg-gradient-to-br from-green-50 to-emerald-100 p-8 rounded-2xl hover-lift">
+                    <div class="w-16 h-16 bg-green-500 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Content Creation</h4>
+                    <p class="text-gray-700 mb-6">
+                        Sáng tạo nội dung chất lượng cao với blog, video, infographic và các định dạng multimedia
+                    </p>
+                    <button class="text-green-600 font-semibold hover:text-green-800 transition-colors">
+                        Tìm hiểu thêm →
+                    </button>
+                </div>
+                
+                <div class="bg-gradient-to-br from-purple-50 to-violet-100 p-8 rounded-2xl hover-lift">
+                    <div class="w-16 h-16 bg-purple-500 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Analytics & Reporting</h4>
+                    <p class="text-gray-700 mb-6">
+                        Phân tích dữ liệu chuyên sâu và báo cáo hiệu quả để tối ưu hóa chiến lược marketing
+                    </p>
+                    <button class="text-purple-600 font-semibold hover:text-purple-800 transition-colors">
+                        Tìm hiểu thêm →
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 gradient-bg text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-4xl md:text-5xl font-bold mb-6">
+                Sẵn Sàng Tăng Trưởng Cùng Chúng Tôi?
+            </h3>
+            <p class="text-xl md:text-2xl mb-8 opacity-90">
+                Liên hệ ngay để nhận tư vấn miễn phí và bắt đầu hành trình marketing thành công
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all hover-lift">
+                    Tư Vấn Miễn Phí
+                </button>
+                <button class="glass-effect text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:bg-opacity-20 transition-all">
+                    Xem Bảng Giá
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-2xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                        Marketing Pro
+                    </h4>
+                    <p class="text-gray-400 mb-6">
+                        Nền tảng quản lý marketing hàng đầu, giúp doanh nghiệp tối ưu hóa chiến lược và đạt được mục tiêu kinh doanh.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h5 class="font-semibold mb-4">Dịch Vụ</h5>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Digital Marketing</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Content Creation</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">SEO Optimization</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Social Media</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Analytics</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h5 class="font-semibold mb-4">Công Ty</h5>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Giới Thiệu</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Đội Ngũ</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Tuyển Dụng</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Tin Tức</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h5 class="font-semibold mb-4">Liên Hệ</h5>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>📍 123 Đường ABC, Quận 1, TP.HCM</li>
+                        <li>📞 +84 123 456 789</li>
+                        <li>✉️ contact@marketingpro.vn</li>
+                        <li>🌐 www.marketingpro.vn</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="border-gray-800 my-8">
+            
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">
+                    © 2025 Marketing Pro. Tất cả quyền được bảo lưu.
+                </p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 text-sm hover:text-white transition-colors">Chính Sách Bảo Mật</a>
+                    <a href="#" class="text-gray-400 text-sm hover:text-white transition-colors">Điều Khoản Sử Dụng</a>
+                    <a href="#" class="text-gray-400 text-sm hover:text-white transition-colors">Hỗ Trợ</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Projects slider functionality
+        let currentProjectSlide = 0;
+        const projectSlides = document.querySelectorAll('#projects-track .slide');
+        const projectDots = document.querySelectorAll('.slider-dot');
+        const projectsTrack = document.getElementById('projects-track');
+
+        function showProjectSlide(index) {
+            projectSlides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+            
+            projectDots.forEach((dot, i) => {
+                if (i === index) {
+                    dot.classList.remove('bg-gray-300');
+                    dot.classList.add('bg-purple-600');
+                } else {
+                    dot.classList.remove('bg-purple-600');
+                    dot.classList.add('bg-gray-300');
+                }
+            });
+            
+            projectsTrack.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        function nextProjectSlide() {
+            currentProjectSlide = (currentProjectSlide + 1) % projectSlides.length;
+            showProjectSlide(currentProjectSlide);
+        }
+
+        // Auto-advance projects slider
+        setInterval(nextProjectSlide, 5000);
+
+        // Project slider dot navigation
+        projectDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentProjectSlide = index;
+                showProjectSlide(currentProjectSlide);
+            });
+        });
+
+        // Reviews slider functionality
+        let currentReviewSlide = 0;
+        const reviewSlides = document.querySelectorAll('#reviews-track .slide');
+        const reviewDots = document.querySelectorAll('.reviews-dot');
+        const reviewsTrack = document.getElementById('reviews-track');
+
+        function showReviewSlide(index) {
+            reviewSlides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+            
+            reviewDots.forEach((dot, i) => {
+                if (i === index) {
+                    dot.classList.remove('bg-gray-300');
+                    dot.classList.add('bg-purple-600');
+                } else {
+                    dot.classList.remove('bg-purple-600');
+                    dot.classList.add('bg-gray-300');
+                }
+            });
+            
+            reviewsTrack.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        function nextReviewSlide() {
+            currentReviewSlide = (currentReviewSlide + 1) % reviewSlides.length;
+            showReviewSlide(currentReviewSlide);
+        }
+
+        // Auto-advance reviews slider
+        setInterval(nextReviewSlide, 7000);
+
+        // Review slider dot navigation
+        reviewDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentReviewSlide = index;
+                showReviewSlide(currentReviewSlide);
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('bg-white', 'shadow-lg');
+            } else {
+                nav.classList.remove('bg-white', 'shadow-lg');
+            }
+        });
+    </script>
+</body>
 </html>
