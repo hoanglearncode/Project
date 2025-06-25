@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dự Án - Marketing Pro</title>
+	<link rel="icon" type="image/x-icon" href="./Logo-Techincom-007.ico" />
+    <title>Dự Án - Techincom</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .gradient-bg {
@@ -85,12 +86,16 @@
     <!-- Navigation -->
     <nav class="bg-white shadow-lg sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
+            <div class="flex justify-between items-center h-20">
                 <div class="flex items-center">
-                    <div class="flex-shrink-0">
-                        <h1 class="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-                            Marketing Pro
-                        </h1>
+                    <div class="flex gap-4 items-center justify-center">
+                        <img src="./public/techincom.jpg" alt="logo" class="h-10 w-10 rounded-full">
+                        <div class="text-gray-900 flex flex-col max-w-[500px]">
+                            <h1 class="text-xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent text-wrap">
+                                Công ty Cổ phần Kỹ thuật Hạ Tầng Viễn Thông
+                            </h1>
+                            <span class="text-xs mt-1">Kết nối tương lai với công nghệ hiện đại</span>
+                        </div>
                     </div>
                 </div>
                 
@@ -117,14 +122,15 @@
         <!-- Mobile menu -->
         <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
             <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="./index.html" class="block px-3 py-2 text-gray-700 hover:text-purple-600">Trang Chủ</a>
+                <a href="./index.html" class="block px-3 py-2 text-purple-600 font-medium">Trang Chủ</a>
                 <a href="./about.html" class="block px-3 py-2 text-gray-700 hover:text-purple-600">Giới Thiệu</a>
-                <a href="./project.html" class="block px-3 py-2 text-purple-600 font-medium">Dự Án</a>
+                <a href="./project.html" class="block px-3 py-2 text-gray-700 hover:text-purple-600">Dự Án</a>
                 <a href="./pricing.html" class="block px-3 py-2 text-gray-700 hover:text-purple-600">Bảng Giá</a>
                 <a href="./contact.html" class="block px-3 py-2 text-gray-700 hover:text-purple-600">Liên Hệ</a>
             </div>
         </div>
     </nav>
+
 
     <!-- Hero Section -->
     <section class="gradient-bg text-white py-20 relative overflow-hidden">
@@ -136,7 +142,7 @@
                     <span class="block text-yellow-300">Chúng Tôi</span>
                 </h2>
                 <p class="text-xl md:text-2xl mb-8 opacity-90 max-w-3xl mx-auto">
-                    Khám phá những dự án marketing thành công đã giúp hàng trăm doanh nghiệp tăng trưởng vượt bậc
+                    Khám phá những dự án hạ tầng thành công của công ty Techincom
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
                     <button class="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all hover-lift">
@@ -165,16 +171,16 @@
                         Tất Cả
                     </button>
                     <button class="filter-btn bg-gray-100 text-gray-700 px-6 py-3 rounded-full font-semibold transition-all hover-lift hover:bg-gray-200" onclick="filterProjects('digital')">
-                        Digital Marketing
+                        Kết nối Internet
                     </button>
                     <button class="filter-btn bg-gray-100 text-gray-700 px-6 py-3 rounded-full font-semibold transition-all hover-lift hover:bg-gray-200" onclick="filterProjects('branding')">
-                        Branding
+                        Truy nhập Internet
                     </button>
                     <button class="filter-btn bg-gray-100 text-gray-700 px-6 py-3 rounded-full font-semibold transition-all hover-lift hover:bg-gray-200" onclick="filterProjects('ecommerce')">
-                        E-commerce
+                        Thiết bị viễn thông
                     </button>
                     <button class="filter-btn bg-gray-100 text-gray-700 px-6 py-3 rounded-full font-semibold transition-all hover-lift hover:bg-gray-200" onclick="filterProjects('content')">
-                        Content Marketing
+                        Tuyến cáp quang
                     </button>
                 </div>
             </div>
@@ -190,23 +196,23 @@
                     <div class="h-48 bg-gradient-to-r from-blue-500 to-purple-600 relative">
                         <div class="absolute inset-0 flex items-center justify-center">
                             <div class="text-center text-white">
-                                <div class="text-4xl font-bold mb-2">300%</div>
-                                <div class="text-lg opacity-90">Tăng Trưởng ROI</div>
+                                <div class="text-4xl font-bold mb-2">100%</div>
+                                <div class="text-lg opacity-90">Kết nối ổn định</div>
                             </div>
                         </div>
                         <div class="absolute top-4 right-4">
-                            <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm text-white">Digital Marketing</span>
+                            <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm text-white">Kênh thuê riêng</span>
                         </div>
                     </div>
                     <div class="p-6">
-                        <h4 class="text-xl font-bold text-gray-900 mb-3">Chiến Dịch SEO & SEM - TechViet</h4>
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">Công ty TechViet</h4>
                         <p class="text-gray-600 mb-4">
-                            Tối ưu hóa website và quảng cáo Google Ads giúp công ty công nghệ tăng traffic 500% và conversion rate 300%.
+                            Kết nối các văn phòng công ty trên phạm vi toàn quốc, truyền dữ liệu liên tục, không gián đoạn.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">SEO</span>
-                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Google Ads</span>
-                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Analytics</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">ADM</span>
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Kết nối</span>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Hiệu quả</span>
                         </div>
                         <div class="flex justify-between items-center">
                             <div class="text-sm text-gray-500">6 tháng</div>
@@ -222,26 +228,26 @@
                     <div class="h-48 bg-gradient-to-r from-green-500 to-teal-600 relative">
                         <div class="absolute inset-0 flex items-center justify-center">
                             <div class="text-center text-white">
-                                <div class="text-4xl font-bold mb-2">250%</div>
-                                <div class="text-lg opacity-90">Tăng Nhận Diện</div>
+                                <div class="text-4xl font-bold mb-2">450M</div>
+                                <div class="text-lg opacity-90">Băng thông internet</div>
                             </div>
                         </div>
                         <div class="absolute top-4 right-4">
-                            <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm text-white">Branding</span>
+                            <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm text-white">Truy nhập</span>
                         </div>
                     </div>
                     <div class="p-6">
-                        <h4 class="text-xl font-bold text-gray-900 mb-3">Xây Dựng Thương Hiệu - FoodMax</h4>
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">Siêu thị Fumiki Mart</h4>
                         <p class="text-gray-600 mb-4">
-                            Thiết kế bộ nhận diện thương hiệu hoàn chỉnh và chiến lược content giúp startup F&B nổi bật trên thị trường.
+                            Xây dựng hệ thống kết nối internet tốc độ cao, đảm bảo doanh nghiệp liên tục cập nhật thông tin lên trang web thương mai điện tử quốc tế.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Logo Design</span>
-                            <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm">Brand Identity</span>
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Content Strategy</span>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Tuyến cáp quang</span>
+                            <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm">ADM</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Kết nối</span>
                         </div>
                         <div class="flex justify-between items-center">
-                            <div class="text-sm text-gray-500">4 tháng</div>
+                            <div class="text-sm text-gray-500">20 tháng</div>
                             <button class="text-green-600 font-semibold hover:text-green-800 transition-colors">
                                 Xem Chi Tiết →
                             </button>
@@ -254,23 +260,23 @@
                     <div class="h-48 bg-gradient-to-r from-orange-500 to-red-600 relative">
                         <div class="absolute inset-0 flex items-center justify-center">
                             <div class="text-center text-white">
-                                <div class="text-4xl font-bold mb-2">400%</div>
+                                <div class="text-4xl font-bold mb-2">300%</div>
                                 <div class="text-lg opacity-90">Tăng Doanh Thu</div>
                             </div>
                         </div>
                         <div class="absolute top-4 right-4">
-                            <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm text-white">E-commerce</span>
+                            <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm text-white">Tuyến quang</span>
                         </div>
                     </div>
                     <div class="p-6">
-                        <h4 class="text-xl font-bold text-gray-900 mb-3">Tối Ưu E-commerce - ShopViet</h4>
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">Viễn thông Việt Net</h4>
                         <p class="text-gray-600 mb-4">
-                            Cải thiện UX/UI website, tối ưu conversion funnel và triển khai email marketing automation.
+                            Tuyến cáp quang kết nối trạm viễn thông, máy chủ và phòng máy trung tâm.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">CRO</span>
-                            <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">Email Marketing</span>
-                            <span class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm">PPC</span>
+                            <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">OPT</span>
+                            <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">Riêng biệt</span>
+                            <span class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm">An toàn</span>
                         </div>
                         <div class="flex justify-between items-center">
                             <div class="text-sm text-gray-500">8 tháng</div>
@@ -287,25 +293,25 @@
                         <div class="absolute inset-0 flex items-center justify-center">
                             <div class="text-center text-white">
                                 <div class="text-4xl font-bold mb-2">500%</div>
-                                <div class="text-lg opacity-90">Tăng Engagement</div>
+                                <div class="text-lg opacity-90">Chủ động </div>
                             </div>
                         </div>
                         <div class="absolute top-4 right-4">
-                            <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm text-white">Content Marketing</span>
+                            <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm text-white">Kết nối internet</span>
                         </div>
                     </div>
                     <div class="p-6">
-                        <h4 class="text-xl font-bold text-gray-900 mb-3">Content Strategy - BeautyPlus</h4>
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">Công ty Quảng Cáo Hồng Bách</h4>
                         <p class="text-gray-600 mb-4">
-                            Xây dựng chiến lược content đa kênh với video, blog và social media cho thương hiệu làm đẹp.
+                            Kết nối server đối tác quốc tế an toàn, hiệu qua và nhanh tróng.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm">Video Content</span>
-                            <span class="bg-rose-100 text-rose-800 px-3 py-1 rounded-full text-sm">Blog Writing</span>
-                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Social Media</span>
+                            <span class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm">Băng thông</span>
+                            <span class="bg-rose-100 text-rose-800 px-3 py-1 rounded-full text-sm">Quốc tế</span>
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Bảo mật</span>
                         </div>
                         <div class="flex justify-between items-center">
-                            <div class="text-sm text-gray-500">5 tháng</div>
+                            <div class="text-sm text-gray-500">20 tháng</div>
                             <button class="text-pink-600 font-semibold hover:text-pink-800 transition-colors">
                                 Xem Chi Tiết →
                             </button>
@@ -319,22 +325,22 @@
                         <div class="absolute inset-0 flex items-center justify-center">
                             <div class="text-center text-white">
                                 <div class="text-4xl font-bold mb-2">350%</div>
-                                <div class="text-lg opacity-90">Tăng Leads</div>
+                                <div class="text-lg opacity-90">Tăng hiệu quả vận hành</div>
                             </div>
                         </div>
                         <div class="absolute top-4 right-4">
-                            <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm text-white">Digital Marketing</span>
+                            <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm text-white">Kênh thuê riêng</span>
                         </div>
                     </div>
                     <div class="p-6">
-                        <h4 class="text-xl font-bold text-gray-900 mb-3">Lead Generation - EduTech</h4>
+                        <h4 class="text-xl font-bold text-gray-900 mb-3"> EduTech</h4>
                         <p class="text-gray-600 mb-4">
-                            Triển khai funnel marketing automation và landing page tối ưu cho startup giáo dục công nghệ.
+                            Triển khai kết nối các trung tâm phân tán, đào tạo online nhiều lớp, đa phương thức.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Marketing Automation</span>
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Landing Page</span>
-                            <span class="bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-sm">Lead Nurturing</span>
+                            <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">Kết nối</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Cáp quang</span>
+                            <span class="bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-sm">Bảo mật</span>
                         </div>
                         <div class="flex justify-between items-center">
                             <div class="text-sm text-gray-500">7 tháng</div>
@@ -351,25 +357,25 @@
                         <div class="absolute inset-0 flex items-center justify-center">
                             <div class="text-center text-white">
                                 <div class="text-4xl font-bold mb-2">180%</div>
-                                <div class="text-lg opacity-90">Tăng Brand Awareness</div>
+                                <div class="text-lg opacity-90">Phạm vi hoạt động</div>
                             </div>
                         </div>
                         <div class="absolute top-4 right-4">
-                            <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm text-white">Branding</span>
+                            <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm text-white">Truy nhập internet</span>
                         </div>
                     </div>
                     <div class="p-6">
-                        <h4 class="text-xl font-bold text-gray-900 mb-3">Rebranding - GreenLife</h4>
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">Công ty GreenLife</h4>
                         <p class="text-gray-600 mb-4">
-                            Làm mới hoàn toàn bộ nhận diện thương hiệu và chiến lược truyền thông cho công ty sản phẩm xanh.
+                            Kết nối internet cho hoạt động truyền thông, marketting chuyên nghiệp.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">Rebranding</span>
-                            <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Package Design</span>
-                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">PR Campaign</span>
+                            <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">Băng thông</span>
+                            <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">An toàn</span>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Hiệu quả</span>
                         </div>
                         <div class="flex justify-between items-center">
-                            <div class="text-sm text-gray-500">3 tháng</div>
+                            <div class="text-sm text-gray-500">15 tháng</div>
                             <button class="text-yellow-600 font-semibold hover:text-yellow-800 transition-colors">
                                 Xem Chi Tiết →
                             </button>
@@ -427,7 +433,7 @@
                     </div>
                     <h4 class="text-xl font-bold text-gray-900 mb-3">Phân Tích & Lập Kế Hoạch</h4>
                     <p class="text-gray-600">
-                        Nghiên cứu thị trường, đối thủ cạnh tranh và xây dựng chiến lược phù hợp
+                        Nghiên cứu nhu cầu, phân tích hoạt độngc của hệ thống để lập kế hoạch triển khai phù hợp
                     </p>
                 </div>
                 
@@ -437,7 +443,7 @@
                     </div>
                     <h4 class="text-xl font-bold text-gray-900 mb-3">Triển Khai & Thực Hiện</h4>
                     <p class="text-gray-600">
-                        Áp dụng các công cụ và kỹ thuật marketing hiện đại để đạt mục tiêu đề ra
+                        Áp dụng các công cụ và công nghệ hiện đại để đạt mục tiêu đề ra
                     </p>
                 </div>
                 
@@ -447,7 +453,7 @@
                     </div>
                     <h4 class="text-xl font-bold text-gray-900 mb-3">Theo Dõi & Tối Ưu</h4>
                     <p class="text-gray-600">
-                        Giám sát hiệu quả campaign và điều chỉnh để đạt kết quả tốt nhất
+                        Giám sát hiệu quả hoạt động và điều chỉnh để đạt kết quả tốt nhất
                     </p>
                 </div>
                 
@@ -471,7 +477,7 @@
                 Bạn Muốn Dự Án Tiếp Theo Là Của Mình?
             </h3>
             <p class="text-xl md:text-2xl mb-8 opacity-90">
-                Hãy liên hệ với chúng tôi để biến ý tưởng marketing của bạn thành hiện thực và bứt phá doanh số.
+                Hãy liên hệ với chúng tôi để nhu cầu của bạn thành hiện thực và bứt phá doanh số.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
                 <a href="./contact.html" class="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all hover-lift">
@@ -489,9 +495,9 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-8">
             <!-- About -->
             <div>
-                <h4 class="text-xl font-bold mb-4 text-white">Marketing Pro</h4>
+                <h4 class="text-xl font-bold mb-4 text-white">Techincom</h4>
                 <p class="text-gray-300 mb-4">
-                    Chúng tôi chuyên cung cấp giải pháp marketing toàn diện, từ chiến lược đến triển khai và tối ưu, giúp doanh nghiệp tăng trưởng bền vững.
+                    Dịch vụ viễn thông an toàn, hiệu quả và bảo mật.
                 </p>
                 <div class="flex space-x-4">
                     <!-- Thêm icon mạng xã hội nếu muốn -->
@@ -520,13 +526,13 @@
             <!-- Contact Info -->
             <div>
                 <h4 class="text-xl font-bold mb-4 text-white">Liên Hệ</h4>
-                <p class="text-gray-300 mb-2">Địa chỉ: 123 Đường ABC, Quận XYZ, TP. HCM</p>
-                <p class="text-gray-300 mb-2">Email: info@marketingpro.vn</p>
-                <p class="text-gray-300">Điện thoại: 0123 456 789</p>
+                <p class="text-gray-300 mb-2">Địa chỉ: C8-29 đường số 12, KDC Phú An, phường Phú Thứ, quận Cái Răng, thành phố Cần Thơ</p>
+                <p class="text-gray-300 mb-2">Email: info@techincom.vn</p>
+                <p class="text-gray-300">Điện thoại: 0706997999</p>
             </div>
         </div>
         <div class="mt-8 border-t border-gray-700 pt-4 text-center text-gray-500 text-sm">
-            &copy; 2025 Marketing Pro. All rights reserved.
+            &copy; 2025 Techincom. All rights reserved.
         </div>
     </footer>
 

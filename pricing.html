@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bảng Giá - Marketing Pro</title>
+	<link rel="icon" type="image/x-icon" href="./Logo-Techincom-007.ico" />
+    <title>Bảng Giá - Techincom</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .gradient-bg {
@@ -96,12 +97,16 @@
     <!-- Navigation -->
     <nav class="bg-white shadow-lg sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
+            <div class="flex justify-between items-center h-20">
                 <div class="flex items-center">
-                    <div class="flex-shrink-0">
-                        <h1 class="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-                            Marketing Pro
-                        </h1>
+                    <div class="flex gap-4 items-center justify-center">
+                        <img src="./public/techincom.jpg" alt="logo" class="h-10 w-10 rounded-full">
+                        <div class="text-gray-900 flex flex-col max-w-[500px]">
+                            <h1 class="text-xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent text-wrap">
+                                Công ty Cổ phần Kỹ thuật Hạ Tầng Viễn Thông
+                            </h1>
+                            <span class="text-xs mt-1">Kết nối tương lai với công nghệ hiện đại</span>
+                        </div>
                     </div>
                 </div>
                 
@@ -128,14 +133,15 @@
         <!-- Mobile menu -->
         <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
             <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="./index.html" class="block px-3 py-2 text-gray-700 hover:text-purple-600">Trang Chủ</a>
+                <a href="./index.html" class="block px-3 py-2 text-purple-600 font-medium">Trang Chủ</a>
                 <a href="./about.html" class="block px-3 py-2 text-gray-700 hover:text-purple-600">Giới Thiệu</a>
                 <a href="./project.html" class="block px-3 py-2 text-gray-700 hover:text-purple-600">Dự Án</a>
-                <a href="./pricing.html" class="block px-3 py-2 text-purple-600 font-medium">Bảng Giá</a>
+                <a href="./pricing.html" class="block px-3 py-2 text-gray-700 hover:text-purple-600">Bảng Giá</a>
                 <a href="./contact.html" class="block px-3 py-2 text-gray-700 hover:text-purple-600">Liên Hệ</a>
             </div>
         </div>
     </nav>
+
 
     <!-- Hero Section -->
     <section class="gradient-bg text-white py-20 relative overflow-hidden">
@@ -147,14 +153,14 @@
                     <span class="block text-yellow-300">Dịch Vụ</span>
                 </h2>
                 <p class="text-xl md:text-2xl mb-8 opacity-90 max-w-3xl mx-auto">
-                    Lựa chọn gói dịch vụ marketing phù hợp với nhu cầu và ngân sách của doanh nghiệp bạn
+                    Lựa chọn dịch vụ viễn thông phù hợp với nhu cầu và ngân sách của doanh nghiệp bạn
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
                     <button class="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all hover-lift">
                         Tư Vấn Miễn Phí
                     </button>
                     <button class="glass-effect text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:bg-opacity-20 transition-all">
-                        So Sánh Gói Dịch Vụ
+                        Lựa chọn dịch vụ
                     </button>
                 </div>
             </div>
@@ -174,10 +180,10 @@
                 <div class="pricing-card bg-white rounded-2xl shadow-lg overflow-hidden hover-lift">
                     <div class="p-8">
                         <div class="text-center mb-8">
-                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Gói Cơ Bản</h3>
-                            <p class="text-gray-600 mb-6">Phù hợp cho startup và doanh nghiệp nhỏ</p>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dịch vụ Kết nối Internet</h3>
+                            <p class="text-gray-600 mb-6">Phù hợp doanh nghiệp kinh doanh viễn thông</p>
                             <div class="mb-4">
-                                <span class="text-5xl font-bold text-gray-900">15M</span>
+                                <span class="text-5xl font-bold text-gray-900">từ 1,5M</span>
                                 <span class="text-xl text-gray-600">₫/tháng</span>
                             </div>
                             <p class="text-sm text-gray-500">Thanh toán hàng tháng</p>
@@ -188,19 +194,19 @@
                                 <svg class="w-5 h-5 feature-check mr-3" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                 </svg>
-                                <span class="text-gray-700">Quản lý 2 kênh social media</span>
+                                <span class="text-gray-700">Băng thông tối thiểu 5 Bb/s</span>
                             </div>
                             <div class="flex items-center">
                                 <svg class="w-5 h-5 feature-check mr-3" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                 </svg>
-                                <span class="text-gray-700">10 bài viết/tháng</span>
+                                <span class="text-gray-700">Dịch vụ kỹ thuật 24/7</span>
                             </div>
                             <div class="flex items-center">
                                 <svg class="w-5 h-5 feature-check mr-3" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                 </svg>
-                                <span class="text-gray-700">Thiết kế đồ họa cơ bản</span>
+                                <span class="text-gray-700">Lắp đặt nhanh</span>
                             </div>
                             <div class="flex items-center">
                                 <svg class="w-5 h-5 feature-check mr-3" fill="currentColor" viewBox="0 0 20 20">
@@ -212,18 +218,18 @@
                                 <svg class="w-5 h-5 feature-check mr-3" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                 </svg>
-                                <span class="text-gray-700">Hỗ trợ email</span>
+                                <span class="text-gray-700">Hỗ trợ bảo trì, tối ưu hệ thống</span>
                             </div>
                             <div class="flex items-center">
                                 <svg class="w-5 h-5 feature-cross mr-3" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                                 </svg>
-                                <span class="text-gray-400">Quảng cáo trả phí</span>
+                                <span class="text-gray-400">Tính phí dịch vụ ngoài giờ</span>
                             </div>
                         </div>
                         
                         <button class="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-4 rounded-xl font-semibold text-lg hover:shadow-lg transition-all hover-lift">
-                            Chọn Gói Này
+                            Chọn Dịch vụ Này
                         </button>
                     </div>
                 </div>
@@ -233,10 +239,10 @@
                     <div class="popular-badge">Phổ Biến</div>
                     <div class="p-8">
                         <div class="text-center mb-8">
-                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Gói Chuyên Nghiệp</h3>
-                            <p class="text-gray-600 mb-6">Dành cho doanh nghiệp vừa và lớn</p>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dịch vụ truy nhập internet</h3>
+                            <p class="text-gray-600 mb-6">Dành cho mọi khách hàng</p>
                             <div class="mb-4">
-                                <span class="text-5xl font-bold text-gray-900">35M</span>
+                                <span class="text-5xl font-bold text-gray-900">250K</span>
                                 <span class="text-xl text-gray-600">₫/tháng</span>
                             </div>
                             <p class="text-sm text-gray-500">Thanh toán hàng tháng</p>
@@ -247,48 +253,48 @@
                                 <svg class="w-5 h-5 feature-check mr-3" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                 </svg>
-                                <span class="text-gray-700">Quản lý 5 kênh social media</span>
+                                <span class="text-gray-700">Nhiều mức băng thông</span>
                             </div>
                             <div class="flex items-center">
                                 <svg class="w-5 h-5 feature-check mr-3" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                 </svg>
-                                <span class="text-gray-700">25 bài viết/tháng</span>
+                                <span class="text-gray-700">Không giới hạn dung lượng</span>
                             </div>
                             <div class="flex items-center">
                                 <svg class="w-5 h-5 feature-check mr-3" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                 </svg>
-                                <span class="text-gray-700">Thiết kế đồ họa chuyên nghiệp</span>
+                                <span class="text-gray-700">Hỗ trợ tối ưu mạng nội bộ</span>
                             </div>
                             <div class="flex items-center">
                                 <svg class="w-5 h-5 feature-check mr-3" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                 </svg>
-                                <span class="text-gray-700">Video content (2 video/tháng)</span>
+                                <span class="text-gray-700">Tính phí thiết bị đầu cuối</span>
                             </div>
                             <div class="flex items-center">
                                 <svg class="w-5 h-5 feature-check mr-3" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                 </svg>
-                                <span class="text-gray-700">Quảng cáo trả phí (5M budget)</span>
+                                <span class="text-gray-700">Hỗ trợ thiết bị wifi</span>
                             </div>
                             <div class="flex items-center">
                                 <svg class="w-5 h-5 feature-check mr-3" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                 </svg>
-                                <span class="text-gray-700">Báo cáo chi tiết hàng tuần</span>
+                                <span class="text-gray-700">Gửi thông tin dung lượng hàng tháng</span>
                             </div>
                             <div class="flex items-center">
                                 <svg class="w-5 h-5 feature-check mr-3" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                 </svg>
-                                <span class="text-gray-700">Hỗ trợ ưu tiên</span>
+                                <span class="text-gray-700">Hỗ trợ bảo vệ chống virus</span>
                             </div>
                         </div>
                         
                         <button class="w-full bg-gradient-to-r from-orange-500 to-red-500 text-white py-4 rounded-xl font-semibold text-lg hover:shadow-lg transition-all hover-lift">
-                            Chọn Gói Này
+                            Chọn Dịch Vụ Này
                         </button>
                     </div>
                 </div>
@@ -297,8 +303,8 @@
                 <div class="pricing-card bg-white rounded-2xl shadow-lg overflow-hidden hover-lift">
                     <div class="p-8">
                         <div class="text-center mb-8">
-                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Gói Doanh Nghiệp</h3>
-                            <p class="text-gray-600 mb-6">Giải pháp toàn diện cho tập đoàn</p>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dịch vụ thuê sợi quang</h3>
+                            <p class="text-gray-600 mb-6">Giải pháp toàn diện cho doanh nghiệp</p>
                             <div class="mb-4">
                                 <span class="text-5xl font-bold text-gray-900">75M</span>
                                 <span class="text-xl text-gray-600">₫/tháng</span>
@@ -311,43 +317,43 @@
                                 <svg class="w-5 h-5 feature-check mr-3" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                 </svg>
-                                <span class="text-gray-700">Quản lý không giới hạn kênh</span>
+                                <span class="text-gray-700">Kết nối các điểm đặt thiết bị</span>
                             </div>
                             <div class="flex items-center">
                                 <svg class="w-5 h-5 feature-check mr-3" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                 </svg>
-                                <span class="text-gray-700">50+ bài viết/tháng</span>
+                                <span class="text-gray-700">Dự phòng tuyến cáp</span>
                             </div>
                             <div class="flex items-center">
                                 <svg class="w-5 h-5 feature-check mr-3" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                 </svg>
-                                <span class="text-gray-700">Creative design cao cấp</span>
+                                <span class="text-gray-700">Triển khai theo yêu cầu của khách hàng</span>
                             </div>
                             <div class="flex items-center">
                                 <svg class="w-5 h-5 feature-check mr-3" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                 </svg>
-                                <span class="text-gray-700">Video content chuyên nghiệp</span>
+                                <span class="text-gray-700">Bảo mật hệ thống</span>
                             </div>
                             <div class="flex items-center">
                                 <svg class="w-5 h-5 feature-check mr-3" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                 </svg>
-                                <span class="text-gray-700">Quảng cáo đa kênh (20M+ budget)</span>
+                                <span class="text-gray-700">Hỗ trợ bảo hành 24/7</span>
                             </div>
                             <div class="flex items-center">
                                 <svg class="w-5 h-5 feature-check mr-3" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                 </svg>
-                                <span class="text-gray-700">Dedicated account manager</span>
+                                <span class="text-gray-700">Giám sát hệ thống từ xa</span>
                             </div>
                             <div class="flex items-center">
                                 <svg class="w-5 h-5 feature-check mr-3" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                                 </svg>
-                                <span class="text-gray-700">Hỗ trợ 24/7</span>
+                                <span class="text-gray-700">Mở rộng hệ thống</span>
                             </div>
                         </div>
                         
@@ -364,9 +370,9 @@
     <section class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-gradient-to-r from-purple-600 to-blue-600 rounded-3xl p-12 text-white text-center">
-                <h3 class="text-4xl font-bold mb-6">Cần Giải Pháp Riêng?</h3>
+                <h3 class="text-4xl font-bold mb-6">Hệ thống viễn thông độc lập</h3>
                 <p class="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-                    Chúng tôi thiết kế gói dịch vụ tùy chỉnh phù hợp với nhu cầu cụ thể của doanh nghiệp bạn
+                    Chúng tôi thiết kế hệ thống viễn thông độc lập phù hợp với nhu cầu của doanh nghiệp
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
                     <button class="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all hover-lift">
@@ -386,32 +392,32 @@
             <div class="text-center mb-12">
                 <h3 class="text-4xl font-bold text-gray-900 mb-4">Câu Hỏi Thường Gặp</h3>
                 <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                    Những thắc mắc phổ biến về gói dịch vụ và cách thức làm việc
+                    Những thắc mắc phổ biến về dịch vụ và cách thức làm việc
                 </p>
             </div>
             <div class="space-y-4">
                 <!-- FAQ Item 1 -->
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
                     <button class="w-full flex justify-between items-center p-6 faq-question hover:bg-gray-100 focus:outline-none">
-                        <span class="text-lg font-medium text-gray-900">Bao lâu thì nhận được báo cáo?</span>
+                        <span class="text-lg font-medium text-gray-900">Thời gian xử lý sự cố mất kết nối?</span>
                         <svg class="w-6 h-6 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                         </svg>
                     </button>
                     <div class="faq-answer px-6 pb-6 text-gray-700 hidden">
-                        Chúng tôi gửi báo cáo hàng tuần hoặc theo thỏa thuận cụ thể trong hợp đồng. Thông thường báo cáo chi tiết được gửi vào thứ Hai đầu tuần về kết quả tuần trước.
+                        Chúng tôi xử lý sự cố trong vòng tối đa 2h sau khi nhận được thông tin từ khách hàng.
                     </div>
                 </div>
                 <!-- FAQ Item 2 -->
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
                     <button class="w-full flex justify-between items-center p-6 faq-question hover:bg-gray-100 focus:outline-none">
-                        <span class="text-lg font-medium text-gray-900">Có thể thay đổi gói giữa chừng không?</span>
+                        <span class="text-lg font-medium text-gray-900">Có thể thay đỏi băng thông giữa chừng không?</span>
                         <svg class="w-6 h-6 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                         </svg>
                     </button>
                     <div class="faq-answer px-6 pb-6 text-gray-700 hidden">
-                        Hoàn toàn có thể. Bạn chỉ cần thông báo trước 7 ngày để chúng tôi điều chỉnh lịch và ngân sách, đảm bảo quá trình chuyển đổi suôn sẻ.
+                        Hoàn toàn có thể. Khách hàng thông báo trước 7 ngày để Techincom thực hiện điều chỉnh dịch vụ.
                     </div>
                 </div>
                 <!-- FAQ Item 3 -->
@@ -447,7 +453,7 @@
                         </svg>
                     </button>
                     <div class="faq-answer px-6 pb-6 text-gray-700 hidden">
-                        Đối với gói Enterprise, chúng tôi cung cấp hỗ trợ 24/7. Các gói khác có thời gian hỗ trợ theo giờ hành chính, tùy thỏa thuận chi tiết trong hợp đồng.
+                        Chúng tôi cung cấp hỗ trợ 24/7. Các dịch vụ khác có thời gian hỗ trợ theo giờ hành chính, tùy thỏa thuận chi tiết trong hợp đồng.
                     </div>
                 </div>
             </div>
@@ -459,9 +465,9 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-8">
             <!-- About -->
             <div>
-                <h4 class="text-xl font-bold mb-4 text-white">Marketing Pro</h4>
+                <h4 class="text-xl font-bold mb-4 text-white">Techincom</h4>
                 <p class="text-gray-300 mb-4">
-                    Giải pháp marketing chuyên nghiệp cho mọi quy mô doanh nghiệp. Chúng tôi đồng hành để giúp bạn tăng trưởng bền vững.
+                    Dịch vụ viễn thông an toàn, hiệu quả và bảo mật.
                 </p>
                 <div class="flex space-x-4">
                     <a href="#" aria-label="Facebook" class="hover:text-white">
@@ -489,13 +495,13 @@
             <!-- Contact Info -->
             <div>
                 <h4 class="text-xl font-bold mb-4 text-white">Liên Hệ</h4>
-                <p class="text-gray-300 mb-2">Địa chỉ: 123 Đường ABC, Quận XYZ, TP. HCM</p>
-                <p class="text-gray-300 mb-2">Email: info@marketingpro.vn</p>
-                <p class="text-gray-300">Điện thoại: 0123 456 789</p>
+                <p class="text-gray-300 mb-2">Địa chỉ: C8-29 đường số 12, KDC Phú An, phường Phú Thứ, quận Cái Răng, thành phố Cần Thơ</p>
+                <p class="text-gray-300 mb-2">Email: info@techincom.vn</p>
+                <p class="text-gray-300">Điện thoại: 0706997999</p>
             </div>
         </div>
         <div class="mt-8 border-t border-gray-700 pt-4 text-center text-gray-500 text-sm">
-            &copy; 2025 Marketing Pro. All rights reserved.
+            &copy; 2025 Techincom. All rights reserved.
         </div>
     </footer>
 

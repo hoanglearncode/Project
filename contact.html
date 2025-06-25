@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liên Hệ - Marketing Pro</title>
+	<link rel="icon" type="image/x-icon" href="./Logo-Techincom-007.ico" />
+    <title>Liên Hệ - Techincom</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .gradient-bg {
@@ -89,22 +90,26 @@
     <!-- Navigation -->
     <nav class="bg-white shadow-lg sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
+            <div class="flex justify-between items-center h-20">
                 <div class="flex items-center">
-                    <div class="flex-shrink-0">
-                        <h1 class="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-                            Marketing Pro
-                        </h1>
+                    <div class="flex gap-4 items-center justify-center">
+                        <img src="./public/techincom.jpg" alt="logo" class="h-10 w-10 rounded-full">
+                        <div class="text-gray-900 flex flex-col max-w-[500px]">
+                            <h1 class="text-xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent text-wrap">
+                                Công ty Cổ phần Kỹ thuật Hạ Tầng Viễn Thông
+                            </h1>
+                            <span class="text-xs mt-1">Kết nối tương lai với công nghệ hiện đại</span>
+                        </div>
                     </div>
                 </div>
                 
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="./index.html" class="nav-link text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors">Trang Chủ</a>
+                        <a href="./index.html" class="nav-link text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">Trang Chủ</a>
                         <a href="./about.html" class="nav-link text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors">Giới Thiệu</a>
                         <a href="./project.html" class="nav-link text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors">Dự Án</a>
                         <a href="./pricing.html" class="nav-link text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors">Bảng Giá</a>
-                        <a href="./contact.html" class="nav-link text-purple-600 border-b-2 border-purple-600 px-3 py-2 text-sm font-medium">Liên Hệ</a>
+                        <a href="./contact.html" class="nav-link border-b-2 border-purple-600 text-purple-600 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors">Liên Hệ</a>
                     </div>
                 </div>
                 
@@ -121,11 +126,11 @@
         <!-- Mobile menu -->
         <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
             <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="./index.html" class="block px-3 py-2 text-gray-700 hover:text-purple-600">Trang Chủ</a>
+                <a href="./index.html" class="block px-3 py-2 text-purple-600 font-medium">Trang Chủ</a>
                 <a href="./about.html" class="block px-3 py-2 text-gray-700 hover:text-purple-600">Giới Thiệu</a>
                 <a href="./project.html" class="block px-3 py-2 text-gray-700 hover:text-purple-600">Dự Án</a>
                 <a href="./pricing.html" class="block px-3 py-2 text-gray-700 hover:text-purple-600">Bảng Giá</a>
-                <a href="./contact.html" class="block px-3 py-2 text-purple-600 font-medium">Liên Hệ</a>
+                <a href="./contact.html" class="block px-3 py-2 text-gray-700 hover:text-purple-600">Liên Hệ</a>
             </div>
         </div>
     </nav>
@@ -136,18 +141,18 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center">
                 <h2 class="text-5xl md:text-6xl font-bold mb-6 animate-float">
-                    Liên Hệ
+                    THÔNG TIN LIÊN HỆ
                     <span class="block text-yellow-300">Với Chúng Tôi</span>
                 </h2>
                 <p class="text-xl md:text-2xl mb-8 opacity-90 max-w-3xl mx-auto">
-                    Sẵn sàng đồng hành cùng doanh nghiệp bạn chinh phục thị trường số
+                    Sẵn sàng đồng hành cùng khách hàng phát triển hệ thống viễn thông
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
                     <button class="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all hover-lift">
                         Tư Vấn Ngay
                     </button>
                     <button class="glass-effect text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:bg-opacity-20 transition-all">
-                        Xem Portfolio
+                        Thông tin dự án
                     </button>
                 </div>
             </div>
@@ -203,12 +208,12 @@
                             <select id="service" name="service"
                                 class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
                                 <option value="">Chọn dịch vụ</option>
-                                <option value="social-media">Quản lý Social Media</option>
-                                <option value="paid-ads">Quảng cáo trả phí</option>
-                                <option value="content-creation">Sáng tạo nội dung</option>
-                                <option value="seo">SEO & Website</option>
-                                <option value="branding">Xây dựng thương hiệu</option>
-                                <option value="consultation">Tư vấn marketing</option>
+                                <option value="social-media">Thuê sợi quang</option>
+                                <option value="paid-ads">Kênh thuê riêng</option>
+                                <option value="content-creation">Kết nối internet</option>
+                                <option value="seo">Truy nhập internet</option>
+                                <option value="branding">Internet Lease Line</option>
+                                <option value="consultation">Thiết bị viễn thông</option>
                             </select>
                         </div>
                         
@@ -217,10 +222,10 @@
                             <select id="budget" name="budget"
                                 class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
                                 <option value="">Chọn khoảng ngân sách</option>
-                                <option value="under-15m">Dưới 15 triệu</option>
-                                <option value="15m-35m">15 - 35 triệu</option>
-                                <option value="35m-75m">35 - 75 triệu</option>
-                                <option value="over-75m">Trên 75 triệu</option>
+                                <option value="under-15m">Dưới 5 triệu</option>
+                                <option value="15m-35m">5 - 50 triệu</option>
+                                <option value="35m-75m">51 - 100 triệu</option>
+                                <option value="over-75m">Trên 100 triệu</option>
                             </select>
                         </div>
                         
@@ -242,7 +247,7 @@
                 <div class="space-y-8">
                     <!-- Contact Info Cards -->
                     <div class="contact-card bg-white rounded-2xl shadow-lg p-8 hover-lift">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Thông Tin Liên Hệ</h3>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Thông Tin Techincom</h3>
                         
                         <div class="space-y-6">
                             <div class="flex items-start space-x-4">
@@ -254,7 +259,7 @@
                                 </div>
                                 <div>
                                     <h4 class="text-lg font-semibold text-gray-900">Địa chỉ</h4>
-                                    <p class="text-gray-600">123 Đường ABC, Quận XYZ<br>Thành phố Hà Nội, Việt Nam</p>
+                                    <p class="text-gray-600">C8-29 đường số 12, KDC Phú An, phường Phú Thứ<br> quận Cái Răng, Thành phố Cần Thơ, Việt Nam</p>
                                 </div>
                             </div>
                             
@@ -266,7 +271,7 @@
                                 </div>
                                 <div>
                                     <h4 class="text-lg font-semibold text-gray-900">Điện thoại</h4>
-                                    <p class="text-gray-600">+84 123 456 789<br>+84 987 654 321</p>
+                                    <p class="text-gray-600">0706997999 </p>
                                 </div>
                             </div>
                             
@@ -278,7 +283,7 @@
                                 </div>
                                 <div>
                                     <h4 class="text-lg font-semibold text-gray-900">Email</h4>
-                                    <p class="text-gray-600">info@marketingpro.vn<br>support@marketingpro.vn</p>
+                                    <p class="text-gray-600"> techincom.vn <br> info@techincom.vn</p>
                                 </div>
                             </div>
                             
@@ -290,7 +295,7 @@
                                 </div>
                                 <div>
                                     <h4 class="text-lg font-semibold text-gray-900">Giờ làm việc</h4>
-                                    <p class="text-gray-600">Thứ 2 - Thứ 6: 8:00 - 18:00<br>Thứ 7: 8:00 - 12:00</p>
+                                    <p class="text-gray-600">Thứ 2 - Thứ 6: 8:00 - 18:00<br>Thứ 7< CN: 8:00 - 12:00</p>
                                 </div>
                             </div>
                         </div>
@@ -330,18 +335,18 @@
 
                     <!-- Quick Stats -->
                     <div class="contact-card bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-2xl shadow-lg p-8 hover-lift">
-                        <h3 class="text-2xl font-bold mb-6">Tại Sao Chọn Chúng Tôi?</h3>
+                        <h3 class="text-2xl font-bold mb-6">Tại Sao Chọn Techincom?</h3>
                         <div class="grid grid-cols-2 gap-6">
                             <div class="text-center">
-                                <div class="text-3xl font-bold mb-2">500+</div>
+                                <div class="text-3xl font-bold mb-2">196+</div>
                                 <div class="text-sm opacity-90">Dự án thành công</div>
                             </div>
                             <div class="text-center">
-                                <div class="text-3xl font-bold mb-2">98%</div>
+                                <div class="text-3xl font-bold mb-2">100%</div>
                                 <div class="text-sm opacity-90">Khách hàng hài lòng</div>
                             </div>
                             <div class="text-center">
-                                <div class="text-3xl font-bold mb-2">5+</div>
+                                <div class="text-3xl font-bold mb-2">18+</div>
                                 <div class="text-sm opacity-90">Năm kinh nghiệm</div>
                             </div>
                             <div class="text-center">
@@ -359,9 +364,9 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-8">
             <!-- About -->
             <div>
-                <h4 class="text-xl font-bold mb-4 text-white">Marketing Pro</h4>
+                <h4 class="text-xl font-bold mb-4 text-white">Techincom</h4>
                 <p class="text-gray-300 mb-4">
-                    Giải pháp marketing chuyên nghiệp cho mọi quy mô doanh nghiệp. Chúng tôi đồng hành để giúp bạn tăng trưởng bền vững.
+                    Dịch vụ viễn thông an toàn, hiệu quả và bảo mật.
                 </p>
                 <div class="flex space-x-4">
                     <!-- Các icon mạng xã hội tương tự như trên -->
@@ -390,13 +395,13 @@
             <!-- Contact Info -->
             <div>
                 <h4 class="text-xl font-bold mb-4 text-white">Liên Hệ</h4>
-                <p class="text-gray-300 mb-2">Địa chỉ: 123 Đường ABC, Quận XYZ, TP. Hà Nội</p>
-                <p class="text-gray-300 mb-2">Email: info@marketingpro.vn</p>
-                <p class="text-gray-300">Điện thoại: +84 123 456 789</p>
+                <p class="text-gray-300 mb-2">Địa chỉ: C8-29 đường số 12, KDC Phú An, phường Phú Thứ, quận Cái Răng, thành phố Cần Thơ</p>
+                <p class="text-gray-300 mb-2">Email: info@techincom.vn</p>
+                <p class="text-gray-300">Điện thoại: 0706997999</p>
             </div>
         </div>
         <div class="mt-8 border-t border-gray-700 pt-4 text-center text-gray-500 text-sm">
-            &copy; 2025 Marketing Pro. All rights reserved.
+            &copy; 2025 Techincom. All rights reserved.
         </div>
     </footer>
 
